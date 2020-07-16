@@ -1,17 +1,28 @@
 from django.shortcuts import render, redirect
-from .models import Task
-from .forms import TaskForm
+#from .models import Task
+#from .forms import TaskForm
 
 
 def index(request):
-    tasks = Task.objects.order_by('-id')
-    return render(request, 'main/index.html', {'title': 'Главная страница сайта', 'tasks': tasks})
+#    tasks = Task.objects.order_by('-id')
+#    return render(request, 'main/index.html', {'title': 'Главная страница сайта', 'tasks': tasks})
+    return render(request, 'main/index.html')
+
+
+def subscribe(request):
+    return render(request, 'main/subscribe.html')
+
+
+def contacts(request):
+    return render(request, 'main/contacts.html')
 
 
 def about(request):
     return render(request, 'main/about.html')
 
 
+def category(request):
+    return render(request, 'main/category.html')
 '''def create(request):
     error = ''
     if request.method == 'POST':

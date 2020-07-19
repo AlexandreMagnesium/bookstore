@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Підписка на розсилку
+{% endblock %}
+
+{% block content %}
+
+
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="display-4">Отримувати новинки та акції</h1>
+      <form method="post" class="display-4">
+      {% csrf_token %}
+      {{ form.mail_subscribe }}<br>
+      <button type="submit" class="btn btn-primary my-2 lead my-3">Підписатись</button>
+      <span>{{ error }}</span>
+    </form>
+  </div>
+</section>
+
+  {% endblock %}

@@ -1,16 +1,12 @@
 from django.shortcuts import render, redirect
-#from .models import Task
-#from .forms import TaskForm
+from .models import Subscribe
+from .forms import SubscribeForm
 
 
 def index(request):
 #    tasks = Task.objects.order_by('-id')
 #    return render(request, 'main/index.html', {'title': 'Главная страница сайта', 'tasks': tasks})
     return render(request, 'main/index.html')
-
-
-def subscribe(request):
-    return render(request, 'main/subscribe.html')
 
 
 def contacts(request):
@@ -21,21 +17,28 @@ def about(request):
     return render(request, 'main/about.html')
 
 
+def thank(request):
+    return render(request, 'main/thank.html')
+
+
 def category(request):
     return render(request, 'main/category.html')
-'''def create(request):
+
+
+
+def subscribe(request):
     error = ''
     if request.method == 'POST':
-        form = TaskForm(request.POST)
+        form = SubscribeForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('thank')
         else:
-            error = 'Форма была неверной'
+            error = 'Форма була неправильною'
 
-    form = TaskForm()
+    form = SubscribeForm()
     context = {
         'form': form,
         'error': error
     }
-    return render(request, 'main/create.html', context)'''
+    return render(request, 'main/subscribe.html', context)

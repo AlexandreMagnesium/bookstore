@@ -1,4 +1,17 @@
 /* stylelint-disable selector-list-comma-newline-after */
+html { height: 100%; }
+body {
+  min-height:100%;
+  position:relative;
+  padding-bottom: 70px;
+}
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 
 .blog-header {
   line-height: 1;
@@ -117,4 +130,13 @@ h1, h2, h3, h4, h5, h6 {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
+}
+
+.my-style-margin {
+  margin: 35px;
+
+}
+
+.my-style-margin-top {
+  margin-top: 10%;
 }
